@@ -1,0 +1,26 @@
+{
+  "name": "dns_resolver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "resolve": "node src/index.js",
+    "demo": "for d in google.com example.com cloudflare.com wikipedia.org; do echo \"\\n=== $d\"; node src/index.js $d; done",
+    "test": "node --test test/*/*.test.js",
+    "test:watch": "node --test --watch test/*/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/*/*.test.js",
+    "test:unit": "node --test test/dns/*.test.js test/resolver/*.test.js",
+    "test:network": "node --test test/network/*.test.js test/integration/*.test.js"
+  },
+  "keywords": [],
+  "author": "Luka Tchelidze",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "dns-resolve": "src/index.js"
+  }
+}
